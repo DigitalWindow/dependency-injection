@@ -32,4 +32,11 @@ class BasicTest extends TestCase
     {
         $this->injector->get('ClassThatIsntReal');
     }
+
+    public function testWithUnknownConstructorParam()
+    {
+        $result = $this->injector->get('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorParam');
+        $this->assertInstanceOf('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorParam', $result);
+        $this->assertNull($result->param)
+    }
 }

@@ -6,13 +6,13 @@ class UnknownConstructorArg
     /**
      * @var mixed
      */
-    public $param;
+    public $param = 'class default';
 
     /**
      * @param mixed $param
      */
     public function __construct($param)
     {
-        
+        $this->param = $param;
     }
 }

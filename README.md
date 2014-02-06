@@ -1,10 +1,10 @@
-# DirtyNeedle
+# Awin\DependencyInjection
 
 Dependency injection for PHP
 
 ## Usage Examples
 
-    $injector = new \DirtyNeedle\Injector;
+    $injector = new \Awin\DependencyInjection\DependencyInjector;
     $injector->configureDependencyParamValue('Foo', 'param1', 'value to use in constructor');
     $injector->configureDependencyParamClass('Foo', 'param2', '\Bar');
     $foo = $injector->get('Foo')';
@@ -12,7 +12,7 @@ Dependency injection for PHP
 ## Configuration-Free Usage
 
 Simply type-hint the constructor parameters of your dependency, and you needn't
-offer any configuration information to DirtyNeedle - it will use reflection to
+offer any configuration information to the injector - it will use reflection to
 figure out what is needed.
 
 E.g.:

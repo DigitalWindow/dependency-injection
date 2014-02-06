@@ -2,6 +2,10 @@
     "name": "digitalwindow/dependency-injection",
 
     "description": "Easy-to-use Dependency Injection in PHP",
+    
+    "licence": "MIT",
+    
+    "version": "1.0.0",
 
     "type": "library",
         "keywords": [

@@ -5,7 +5,7 @@
 
     "licence": "MIT",
 
-    "version": "1.0.1",
+    "version": "1.0.2",
 
     "type": "library",
         "keywords": [
@@ -14,7 +14,7 @@
     ],
 
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Awin\\": "src/",
             "AwinTest\\": "tests/phpunit/"
         }

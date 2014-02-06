@@ -1,0 +1,27 @@
+{
+    "name": "digitalwindow-dependencyinjection",
+
+    "description": "Easy-to-use Dependency Injection in PHP",
+
+    "type": "library",
+        "keywords": [
+        "dependency injection",
+        "di"
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Awin\\": "src/",
+            "AwinTest\\": "tests/phpunit/"
+        }
+    },
+
+    "require": {
+        "php": ">=5.3.3"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit":      "3.7.*",
+        "symfony/class-loader": "2.4.*"
+    }
+}

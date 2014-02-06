@@ -35,8 +35,8 @@ class BasicTest extends TestCase
 
     public function testWithUnknownConstructorParam()
     {
-        $result = $this->injector->get('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorParam');
-        $this->assertInstanceOf('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorParam', $result);
-        $this->assertNull($result->param)
+        $result = $this->injector->get('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorArg');
+        $this->assertInstanceOf('\AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorArg', $result);
+        $this->assertNull($result->param);
     }
 }

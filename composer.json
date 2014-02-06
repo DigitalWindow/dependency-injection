@@ -1,5 +1,5 @@
 {
-    "name": "digitalwindow-dependencyinjection",
+    "name": "digitalwindow/dependency-injection",
 
     "description": "Easy-to-use Dependency Injection in PHP",
 

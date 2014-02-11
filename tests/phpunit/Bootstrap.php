@@ -10,7 +10,7 @@ class Bootstrap
 
     private function autoloadComposer()
     {
-        require_once __DIR__ . '/../../vendor/vendor/autoload.php';
+        require_once __DIR__ . '/../../vendor/autoload.php';
     }
 
     private function autoloadTestsAndApplication()

@@ -27,3 +27,6 @@ E.g.:
     }
     $foo = $injector->get('Foo'); // Constructor param retrieved recursively from
                                   // injector at this point, based on type-hint.
+
+
+[![Build Status](https://travis-ci.org/DigitalWindow/dependency-injection.png?branch=master)](https://travis-ci.org/DigitalWindow/dependency-injection)

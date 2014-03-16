@@ -39,4 +39,9 @@ class Dic implements DicInterface
     {
         $this->containerArray[$dependencyName] = $dependency;
     }
+
+    public function reset()
+    {
+        $this->containerArray = array();
+    }
 }

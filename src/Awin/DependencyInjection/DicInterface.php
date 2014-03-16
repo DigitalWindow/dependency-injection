@@ -20,4 +20,6 @@ interface DicInterface
      * @param mixed  $dependency
      */
     public function set($dependencyName, $dependency);
+
+    public function reset();
 }

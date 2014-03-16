@@ -15,6 +15,12 @@ class DependencyConfiguration implements DependencyConfigurationInterface
      */
     protected $subdependencyTypes;
 
+    public function reset()
+    {
+        $this->subdependencyValues = array();
+        $this->subdependencyTypes = array();
+    }
+
     /**
      * @param string $dependencyName
      * @param string $subdependencyName

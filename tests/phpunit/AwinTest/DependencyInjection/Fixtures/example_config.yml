@@ -1,0 +1,7 @@
+awin-dependency-injection:
+
+  - dependency-name: \AwinTest\DependencyInjection\Fixtures\InterfaceTypeHinting\InterfaceInConstructorParamTypeHints
+    param-types: {param1: \AwinTest\DependencyInjection\Fixtures\InterfaceTypeHinting\Implementation1}
+
+  - dependency-name: \AwinTest\DependencyInjection\Fixtures\Basic\UnknownConstructorArg
+    param-values: {param: Text from config}

@@ -44,4 +44,6 @@ interface DependencyConfigurationInterface
      * @return string|null
      */
     public function getSubdependencyType($dependencyName, $subdependencyName);
+
+    public function reset();
 }

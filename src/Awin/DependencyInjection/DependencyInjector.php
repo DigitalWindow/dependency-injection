@@ -10,6 +10,8 @@ use Awin\DependencyInjection\DependencyConfigurationInterface;
 use Awin\DependencyInjection\DependencyConfiguration;
 use Awin\DependencyInjection\ReflectorInterface;
 use Awin\DependencyInjection\Reflector;
+use Awin\DependencyInjection\ConfigReaderInterface;
+use Awin\DependencyInjection\ConfigReader;
 use ReflectionParameter;
 
 class DependencyInjector
@@ -35,18 +37,35 @@ class DependencyInjector
     protected $reflector;
 
     /**
+     * @var ConfigReaderInstance
+     */
+    protected $configReader;
+
+    /**
      * @param DicInterface                     $container
      * @param DependencyConfigurationInterface $configuration
      * @param ReflectorInterface               $reflector
+     * @param ConfigReaderInterface            $configReader
      */
     public function __construct(
         DicInterface                     $container     = null,
         DependencyConfigurationInterface $configuration = null,
-        ReflectorInterface               $reflector     = null
+        ReflectorInterface               $reflector     = null,
+        ConfigReaderInterface            $configReader  = null
     ) {
         $this->container     = $container     ?: new Dic;
         $this->configuration = $configuration ?: new DependencyConfiguration;
         $this->reflector     = $reflector     ?: new Reflector;
+        $this->configReader  = $configReader  ?: new ConfigReader;
+    }
+
+    /**
+     * Resets configuration and container
+     */
+    public function reset()
+    {
+        $this->configuration->reset();
+        $this->container->reset();
     }
 
     /**
@@ -219,5 +238,13 @@ class DependencyInjector
                 );
             }
         }
+    }
+
+    /**
+     * @param string $path
+     */
+    public function ingestConfigFile($path)
+    {
+        $this->configReader->addConfigFileToConfiguration($path, $this->configuration);
     }
 }

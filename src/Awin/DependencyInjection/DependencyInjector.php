@@ -176,6 +176,9 @@ class DependencyInjector
         $dependencyConstructorParamName,
         $dependencyConstructorParamValue
     ) {
+        if (!class_exists($dependencyClassname) && !($this->container->has($dependencyClassname))) {
+            throw new ClassDoesNotExistException($dependencyClassname);
+        }
         $this->configuration->setSubdependencyValue($dependencyClassname, $dependencyConstructorParamName, $dependencyConstructorParamValue);
     }
 
@@ -189,6 +192,9 @@ class DependencyInjector
         $dependencyConstructorParamName,
         $dependencyConstructorParamClass
     ) {
+        if (!class_exists($dependencyClassname) && !($this->container->has($dependencyClassname))) {
+            throw new ClassDoesNotExistException($dependencyClassname);
+        }
         $this->configuration->setSubdependencyType($dependencyClassname, $dependencyConstructorParamName, $dependencyConstructorParamClass);
     }
 
